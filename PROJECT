@@ -1,0 +1,20 @@
+domain: hmlss.ml
+layout:
+- go.kubebuilder.io/v3
+projectName: unit-demo
+repo: unit-demo
+resources:
+- api:
+    crdVersion: v1
+    namespaced: true
+  controller: true
+  domain: hmlss.ml
+  group: custom
+  kind: Unit
+  path: unit-demo/api/v1
+  version: v1
+  webhooks:
+    defaulting: true
+    validation: true
+    webhookVersion: v1
+version: "3"
